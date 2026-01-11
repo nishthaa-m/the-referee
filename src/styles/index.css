@@ -1,0 +1,119 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-gradient: linear-gradient(135deg, #ffffff 0%, #ede9fe 100%);
+  /* White to smooth light purple */
+  --bg-secondary: #ffffff;
+  /* Cards */
+  --bg-tertiary: #f3f4f6;
+  /* Inputs */
+
+  --text-primary: #1e1b4b;
+  /* Deep Indigo text */
+  --text-secondary: #6b7280;
+  /* Neutral gray-purple text */
+
+  --accent-primary: #8b5cf6;
+  /* Violet */
+  --accent-secondary: #a855f7;
+  /* Purple */
+  --accent-success: #10b981;
+  --accent-danger: #ef4444;
+  --accent-warning: #f59e0b;
+
+  --border-color: #e5e7eb;
+
+  --font-main: 'Outfit', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  /* Ensures gradient covers full scroll */
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+  background: linear-gradient(to right, #fff, #999);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}

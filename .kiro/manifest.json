@@ -1,0 +1,7 @@
+{
+  "name": "The Referee",
+  "description": "A decision-support tool that compares options and explains trade-offs.",
+  "version": "1.0.0",
+  "author": "Antigravity",
+  "license": "MIT"
+}
